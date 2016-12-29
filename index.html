@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Sample</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul class="logo">
+				<li>Student Assessment</li>
+			</ul>
+
+			<ul class="navigation">
+				<li>Home</li>
+				<li>Contact</li>
+				<li>Log Out</li>
+			</ul>
+		</nav>
+	</header>
+	<h1>Login</h1>
+	<div class="form">
+<form action="step_a.html" method="GET">
+     <input type="text" name="fname" placeholder="Username"><br>
+  	<input type="Password" name="pword" placeholder="Password"><br>
+  	<div class="sub">
+  	<input type="checkbox" name="check">Remember Me<br>
+  	<input type="submit" value="Submit"onclick="move()">
+  	</div>
+</form>
+</div>
+<footer>
+<div class="sp">
+<p> &copy;Nibble Computer Society</p>
+</footer>
+<script>
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >=15){
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+</script>
+</body>
+</html>
