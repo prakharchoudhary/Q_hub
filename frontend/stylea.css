@@ -51,7 +51,7 @@ display:inline;
     }
 .form{
     margin-top:25px;
-    margin-bottom:250px;
+    margin-bottom:220px;
     margin-left: 250px;
     padding-left:350px;
    
@@ -63,7 +63,13 @@ span{
     margin-right:50px;
     padding:5px;
     display:inline-block;
-    margin-bottom:-2px;
+    margin-bottom:-10px;
+}
+a:link, a:visited {
+    font-size:20px;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
 }
 select{
     padding: 5px 12px;
@@ -89,4 +95,5 @@ footer
 i{
     margin-left: 500px;
     margin-bottom: 10px;
+    padding: 10px 10px;
 }
