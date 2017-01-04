@@ -25,7 +25,7 @@
   	<input type="Password" name="pword" placeholder="Password"><br>
   	<div class="sub">
   	<input type="checkbox" name="check">Remember Me<br>
-  	<input type="submit" value="Submit"onclick="move()">
+  	<input type="submit" value="Submit">
   	</div>
 </form>
 </div>
@@ -33,20 +33,5 @@
 <div class="sp">
 <p> &copy;Nibble Computer Society</p>
 </footer>
-<script>
-function move() {
-  var elem = document.getElementById("myBar");   
-  var width = 1;
-  var id = setInterval(frame, 10);
-  function frame() {
-    if (width >=15){
-      clearInterval(id);
-    } else {
-      width++; 
-      elem.style.width = width + '%'; 
-    }
-  }
-}
-</script>
 </body>
 </html>

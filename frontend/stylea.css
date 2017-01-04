@@ -44,10 +44,11 @@ display:inline;
 }
    h1{
     margin-left: 10px;
-    font-size: 30px;
+    font-size: 25px;s
     text-align:center;
     padding-top: 20px;
     color:grey;
+    margin-right: 400px;
     }
 .form{
     margin-top:25px;
@@ -56,8 +57,16 @@ display:inline;
     padding-left:350px;
    
 }
+p{
+    text-align:left;
+}
 h2{
     text-align: center;
+}
+#w3-progressbar{
+    margin-left:500px;
+    margin-bottom:20px;
+    width:15%;
 }
 span{
     margin-right:50px;
