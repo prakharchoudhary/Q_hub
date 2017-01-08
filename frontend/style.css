@@ -63,16 +63,12 @@ div.sub{
     padding:5px;
     display:inline;
 }
-.sp{
-    margin-right: 20px;
-    margin-left:20px;
-    text-align:left;
-   }
 footer
 {
-	 padding:8px;
-     color: white;
+    color: white;
     background-color: #000040;
-    clear: left;
-    text-align: center;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    text-align: left;
 }
