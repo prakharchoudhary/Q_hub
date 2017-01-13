@@ -70,10 +70,6 @@ form {
    input[type=submit]{
      border-radius: 10px;
 }
-
-p{
-    text-align:left;
-}
 span{
     margin: 0 auto;
     padding-right: 40px;
@@ -84,6 +80,9 @@ select{
     display: inline-block;
     border: 2px solid;
     }
+p{
+    text-align:left;
+}
 footer
 {
 	color: white;

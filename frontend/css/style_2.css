@@ -49,22 +49,36 @@ display:inline;
     padding: 30px 0px 5px 50px;
     margin: 0 auto;
     }
-    ul{
+    .icon{
    list-style-type: none;
    display: inline-block;
-   } 
-   
-a:link, a:visited {
-    font-size:20px;
-    padding: 10px 10px;
+}
+   .icon1{
+    list-style-type: none;
+   display: inline-block;
+}
+   .op,#op{
+    
+   margin-bottom: 40px;
+   }
+   .ic,#ic{
+    padding-top: 10px;
+    margin-bottom: 30px;
+   }
+ a{
+    padding-top: 40px;
+    margin: 0 auto;
     text-align: center;
     text-decoration: none;
-    margin:0 auto;
 }
 .list{
-    display: inline-block;
+    display:inline-block;
+    width:100%;
+    margin-left:40%;
 }
-
+p{
+    text-align:left;
+}
 footer
 {
     color: white;
