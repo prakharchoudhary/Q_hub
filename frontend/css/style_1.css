@@ -8,26 +8,25 @@ nav{
 
 .logo{
     padding-bottom:15px;
-   	list-style: none;
-   	font-size:30px;
-   	float:left;
+    list-style: none;
+    font-size:30px;
+    float:left;
 }
-
+h2{
+  text-align: center;
+}
 nav ul{
-   	list-style: none;
+    list-style: none;
     float:right;
 
 }
 
 nav li{
     margin-right: 2px;
-    	display:inline;
+        display:inline;
 }
 #logo{
-    input[type=submit]:hover {
-    background-color: #45a049;
-}
-
+    
     text-align:left;
 }
 #navigation{
