@@ -2,6 +2,7 @@ nav{
     height:80px;
     color: white;
     text-align: center;
+    list-style: none;
     background-color:#000040;
     clear: left;
 }
@@ -16,7 +17,6 @@ h2{
   text-align: center;
 }
 nav ul{
-   	list-style: none;
     float:right;
 
 }
@@ -26,7 +26,7 @@ nav li{
     	display:inline;
 }
 #logo{
-    
+
     text-align:left;
 }
 #navigation{
@@ -60,7 +60,7 @@ display:inline;
    display: inline-block;
 }
    .op,#op{
-    
+
    margin-bottom: 40px;
    }
    .ic,#ic{
@@ -77,16 +77,4 @@ display:inline;
     display:inline-block;
     width:100%;
     margin-left:40%;
-}
-p{
-    text-align:left;
-}
-footer
-{
-    color: white;
-    background-color: #000040;
-    position:absolute;
-    bottom:0;
-    width:100%;
-    text-align: center;
 }

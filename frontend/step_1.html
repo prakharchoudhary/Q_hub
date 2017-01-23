@@ -4,6 +4,8 @@
 	<title>Sample</title>
 	<link rel="stylesheet" type="text/css" href="css/style_1.css">
 	<link rel="stylesheet" type="text/css" href="css/w3.css">
+	<link rel="stylesheet" href="css/base.css">
+
 </head>
 <body>
 	<header>
@@ -25,21 +27,20 @@
   <h3><i>Please select the following fields to continue:</i></h3>
     <div class="form">
     	<form action="step_2.html" method="GET">
-     			<div>
-          <h4>Department:</h4>
-     			<h4>Year:</h4>
-     			<h4>Subject:</h4>
-     			</div>
+
           <div>
-          <span><select name="dept">
-    			<option value="CS">CS</option>
-    			<option value="IT">IT</option>
-    			<option value="EC">EC</option>
-    			<option value="ME">ME</option>
-  			  </select>
+          <span>
+						<select name="dept">
+							<option value="">Select department</option>
+		    			<option value="CS">CS</option>
+		    			<option value="IT">IT</option>
+		    			<option value="EC">EC</option>
+		    			<option value="ME">ME</option>
+  			  	</select>
           </span>
           <span class="year">
   			  <select name="yr">
+					<option value="">Select year</option>
     			<option value="1">1</option>
     			<option value="2">2</option>
     			<option value="3">3</option>
@@ -47,15 +48,16 @@
   			  </select>
           </span>
           <span>
-  			  <select name="subject">
-    			<option value="DS">DS</option>
-    			<option value="DLD">DLD</option>
-    			<option value="Maths">Maths</option>
-    			<option value="DSGT">DSGT</option>
-  			  </select>
+	  			  <select name="subject">
+							<option value="">Select subject</option>
+		    			<option value="DS">DS</option>
+		    			<option value="DLD">DLD</option>
+		    			<option value="Maths">Maths</option>
+		    			<option value="DSGT">DSGT</option>
+	  			  </select>
           </span>
           </div>
-          <br><br>
+
            <input type="submit" value="Proceed">
 		</form>
 	</div>
