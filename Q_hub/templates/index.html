@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block logout %}
+{% if user.is_authenticated %}
+<li><a href="/logout/">LogOut</a></li>
+{% endif %}
+{% endblock %}
+{% block content %}
+<h1>Login</h1>
+<div class="form">
+	<form action="/login/" method="POST">{% csrf_token %}
+	    <!-- <input type="text" name="fname" placeholder="Username"><br>
+	  	<input type="Password" name="pword" placeholder="Password"><br> -->
+	  	<p>{{ form.username }}</p>
+		<p>{{ form.password }}</p>
+	  	<div class="sub">
+	  	<input type="checkbox" name="check">Remember Me <br>
+	  	<input type="submit" value="Submit" />
+	  	</div>
+	</form>
+	{% if flag == 1 %}
+	<p>Username or password is incorrect!</p>
+	{% endif %}
+</div>
+{% endblock %}
