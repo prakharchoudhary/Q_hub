@@ -7,4 +7,3 @@ class LoginForm(forms.Form):
 		label='password', 
 		widget=forms.PasswordInput(attrs={'placeholder': 'Password'})
 		)
-	

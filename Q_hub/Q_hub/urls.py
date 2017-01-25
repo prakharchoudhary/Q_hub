@@ -26,4 +26,3 @@ urlpatterns = [
     url(r'^main/$', views.main, name='main'),
     url(r'^logout/$', views.logout_page),
 ]
-
