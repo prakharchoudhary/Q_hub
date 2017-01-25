@@ -17,3 +17,4 @@ class QuestionDetail(models.Model):
 	unit = models.IntegerField()
 	n_used = models.IntegerField()
 	imp = models.BooleanField(default=False)
+	
