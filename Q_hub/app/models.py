@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 from django.db import models
 from django.contrib.auth.models import User
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 
@@ -12,7 +13,7 @@ class SubjectCode(models.Model):
 class QuestionDetail(models.Model):
 	owner = models.ForeignKey(User)
 	date_created = models.DateTimeField(auto_now_add=True)
-	question = models.TextField()
+	question = RichTextField()
 	marks = models.IntegerField()
 	unit = models.IntegerField()
 	n_used = models.IntegerField()
