@@ -39,14 +39,14 @@ def main(request):
 				'year': form.clean_data['year'],
 				'subject': form.clean_data['subject']
 			}
-			return HttpResponseRedirect(reverse('select', kwargs={'username': user.username}))
+			return redirect('/select/', kwargs={'user':user})
 	form = forms.FilterForm()
 	return render(request, 'step_1.html', {'user': user, 'form': form})
 
 @login_required(login_url='/login/')
-def select(request, username):
-
-	return render_to_response('step_2.html')
+def select(request):
+	user = get_object_or_404(User, username = request.user.username)
+	return render(request, 'step_2.html', {'user': user})
 
 @login_required(login_url='/login/')
 def logout_page(request):

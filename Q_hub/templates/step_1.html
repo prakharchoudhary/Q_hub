@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}
+<title>Sample</title>
+{% endblock %}
+{% block content %}
+<div class="process">
+<h2>Step:1</h2>
+</div>
+<h3><i>Please select the following fields to continue:</i></h3>
+<div class="form">
+<form action="step_2.html" method="POST">{% csrf_token %}
+<div>
+<span>
+{{ form.branch }}
+</span>
+<span class="year">
+{{ form.year }}
+</span>
+<span>
+{{ form.subject }}
+</span>
+</div>
+
+<input type="submit" value="Proceed">
+</form>
+</div>
+{% endblock %}

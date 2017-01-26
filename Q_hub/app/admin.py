@@ -1,6 +1,7 @@
 from django.contrib import admin
-from models import *
+import models 
 # Register your models here.
 
-admin.site.register(SubjectCode)
-admin.site.register(QuestionDetail)
+admin.site.register(models.SubjectCode)
+admin.site.register(models.QuestionDetail)
+admin.site.register(models.Filter)
