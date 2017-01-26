@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
-from config_keys import *
+import config_keys 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
+    'ckeditor',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -78,9 +79,9 @@ WSGI_APPLICATION = 'Q_hub.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': DATABASE_NAME,
-        'USER': MYSQL_USERNAME,
-        'PASSWORD': MYSQL_PASSWORD,
+        'NAME': config_keys.DATABASE_NAME,
+        'USER': config_keys.MYSQL_USERNAME,
+        'PASSWORD': config_keys.MYSQL_PASSWORD,
         'HOST': 'localhost',
         'PORT': '3306',
     }

@@ -18,4 +18,65 @@ class QuestionDetail(models.Model):
 	n_used = models.IntegerField()
 	imp = models.BooleanField(default=False)
 
-	
+class Filter(models.Model):
+	CSE = 'CSE'
+	IT = 'IT'
+	EE = 'EE'
+	ECE = 'ECE'
+	EEE = 'EEE'
+	CE = 'CE'
+	IC = 'IC'
+	ME = 'ME'
+	N = 'Select Branch'
+
+	BRANCH = (
+		(CSE, 'Computer Science'),
+		(IT, 'Information Technology'),
+		(EE, 'Electrical Engineering'),
+		(EEE, 'Electrical and Electronics Engineering'),
+		(ME, 'Mechanical Engineering'),
+		(ECE, 'Electronics and Communication'),
+		(IC, 'Instrumentation and Control'),
+		(CE, 'Civil Engineering'),
+		(N, 'Select Branch')
+	)
+
+	FIRST = 1
+	SECOND = 2
+	THIRD = 3
+	FOURTH = 4
+	M = 'Select Year'
+	ALL = 'ALL'
+	YEAR = (
+		(FIRST, '1'),
+		(SECOND, '2'),
+		(THIRD, '3'),
+		(FOURTH, '4'),
+		(ALL, 'ALL'),
+		(M, 'Select Year')
+	)
+
+	DSGT = 'DSGT'
+	DS = 'DS'
+	MATHS3 = 'MATHS3'
+	CBNST = 'CBNST'
+	OS = 'OS'
+	MUL = 'MUL'
+	TOFL = 'TOFL'
+	O = 'Select Subject'
+	SUBJECT = (
+		(DSGT, 'DSGT'),
+		(DS, 'DS'),
+		(MATHS3, 'MATHS3'),
+		(CBNST, 'CBNST'),
+		(OS, 'OS'),
+		(MUL, 'MUL'),
+		(TOFL, 'TOFL'),
+		(O, 'Select Subject')
+	)
+
+	branch = models.CharField(max_length = 20, choices = BRANCH, default = N)
+
+	year = models.CharField(max_length = 5, choices = YEAR, default = M)
+
+	subject = models.CharField(max_length = 12, choices = SUBJECT, default = O)
