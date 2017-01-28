@@ -1,5 +1,6 @@
-from models import Filter
+from models import Filter, QuestionDetail
 from django import forms
+from ckeditor.widgets import CKEditorWidget
 
 class LoginForm(forms.Form):
 
@@ -18,4 +19,11 @@ class FilterForm(forms.ModelForm):
 
 	class Meta:
 		model = Filter
-		fields = {'branch', 'year', 'subject'}
+		fields = ('branch', 'year', 'subject')
+
+class QuestionForm(forms.ModelForm):
+
+	class Meta:
+		model = QuestionDetail
+		exclude = ('owner','date_created', 'n_used', 'imp')
+		widgets = {'description': CKEditorWidget, }

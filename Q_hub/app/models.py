@@ -14,9 +14,11 @@ class QuestionDetail(models.Model):
 	owner = models.ForeignKey(User)
 	date_created = models.DateTimeField(auto_now_add=True)
 	question = RichTextField()
+	# subject = models.ForeignKey(SubjectCode)
 	marks = models.IntegerField()
 	unit = models.IntegerField()
-	n_used = models.IntegerField()
+	n_used = models.IntegerField(default=0)
+	co = models.IntegerField(default=1)
 	imp = models.BooleanField(default=False)
 
 class Filter(models.Model):
@@ -42,10 +44,10 @@ class Filter(models.Model):
 		(N, 'Select Branch')
 	)
 
-	FIRST = 1
-	SECOND = 2
-	THIRD = 3
-	FOURTH = 4
+	FIRST = '1'
+	SECOND = '2'
+	THIRD = '3'
+	FOURTH = '4'
 	M = 'Select Year'
 	ALL = 'ALL'
 	YEAR = (
@@ -81,3 +83,11 @@ class Filter(models.Model):
 	year = models.CharField(max_length = 5, choices = YEAR, default = M)
 
 	subject = models.CharField(max_length = 12, choices = SUBJECT, default = O)
+
+
+class ActiveSession(models.Model):
+
+	user = models.ForeignKey(User)
+	branch = models.CharField(max_length = 20)
+	year = models.CharField(max_length = 5)
+	subject = models.CharField(max_length = 12)

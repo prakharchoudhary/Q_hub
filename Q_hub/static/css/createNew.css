@@ -1,0 +1,43 @@
+
+h5 {
+  padding-left:50%;
+}
+
+.unit {
+  margin: 10px 50px;
+  box-shadow: 5px 7px 20px 0px #ccc;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.left {
+  width: 48%;
+  display: inline-block;
+  padding-left: 5%;
+  border-right: 1px solid #ccc;
+}
+.right {
+  width: 48%;
+  display: inline-block;
+  padding-left: 3%;
+}
+input[type=number] {
+
+}
+div.sel{
+  display: inline-block;
+  text-align: center;
+}
+div.sel input, div.sel label {
+  margin-bottom: 17px;
+  width: 50px;
+}
+.sel.two, .sel.three {
+  margin-left: 8%;
+}
+form{
+   text-align: center;
+   flex-grow: 2;
+   margin: 0 0 5px 0;
+}

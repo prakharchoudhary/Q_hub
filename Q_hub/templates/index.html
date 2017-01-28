@@ -1,12 +1,16 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 {% block title %}
 <title>Login</title>
+{% endblock %}
+{% block extra %}
+<link rel="stylesheet" type="text/css" href={% static "css/style_index.css" %} />
 {% endblock %}
 {% block content %}
 <div class="process">
 		<h2><b>Login</b></h2>
 		<div class="form">
-				<form action="/main/" method="POST">{% csrf_token %}
+				<form action="/login/" method="POST">{% csrf_token %}
 					{{ form.username }}
 					{{ form.password }}
 				  	<div class="sub">

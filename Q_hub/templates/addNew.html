@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}
+	<title>Add a Question</title>
+	<link rel="stylesheet" type="text/css" href={% static "css/addNew.css" %}>
+{% endblock %}
+{% block content %}
+<div class="process">
+<h2>ADD A NEW QUESTION</h2>
+<form class="add-form" action="." method="POST">{% csrf_token %}
+<div id="editor-wrap">
+{{ form.media }}
+{{ form.question }}
+</div>
+<div class="fields">
+<h3>Select Fields:</h3>
+<span><h5>Unit:</h5>
+{{ form.unit }}<br>
+</span>
+<span><h5>Marks:</h5>
+{{ form.marks }}<br>
+</span>
+<span><h5>CO:</h5>
+{{ form.co }}<br>
+</span>
+<div class="add"><input type="submit" value="ADD"></div>
+</div>
+</form>
+</div>
+{% endblock %}

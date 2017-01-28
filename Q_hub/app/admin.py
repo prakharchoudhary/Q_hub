@@ -5,3 +5,5 @@ import models
 admin.site.register(models.SubjectCode)
 admin.site.register(models.QuestionDetail)
 admin.site.register(models.Filter)
+admin.site.register(models.ActiveSession)
+

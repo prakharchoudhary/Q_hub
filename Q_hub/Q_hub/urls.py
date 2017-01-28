@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'^login/$', auth_views.login, {'template_name': 'index.html'}),
     url(r'^main/$', views.main, name='main'),
     url(r'^select/$', views.select, name='select'),
-    url(r'^logout/$', views.logout_page),
+    url(r'^add_ques/$', views.add_ques, name='add_ques'),
+    url(r'^logout/$', views.logout_page, name='logout'),
 ]

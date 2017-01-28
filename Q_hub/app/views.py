@@ -6,7 +6,8 @@ from django.contrib.auth.models import User
 from django.template import RequestContext
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
-import forms	
+import forms
+from models import ActiveSession, QuestionDetail
 
 # Create your views here.
 def index(request):
@@ -32,24 +33,58 @@ def main(request):
 
 	user = get_object_or_404(User, username = request.user.username)
 	if request.method=='POST':
+		try:
+			ActiveSession.objects.filter(user = user).delete()
+		except:
+			pass
 		form = forms.FilterForm(request.POST)
+		print form.errors
 		if form.is_valid():
-			details = {
-				'branch': form.clean_data['branch'],
-				'year': form.clean_data['year'],
-				'subject': form.clean_data['subject']
-			}
-			return redirect('/select/', kwargs={'user':user})
+			active = ActiveSession.objects.get_or_create(
+				user = user,
+				branch = form.cleaned_data['branch'],
+				year = form.cleaned_data['year'],
+				subject = form.cleaned_data['subject']
+				)
+			return HttpResponseRedirect(reverse('select'))
 	form = forms.FilterForm()
 	return render(request, 'step_1.html', {'user': user, 'form': form})
 
 @login_required(login_url='/login/')
 def select(request):
+
 	user = get_object_or_404(User, username = request.user.username)
-	return render(request, 'step_2.html', {'user': user})
+	active = ActiveSession.objects.get(user=request.user)
+	#just find a way to flush out the records of user from ActiveSession once they logout or change fields.
+	return render(request, 'home.html', {'user': user, 'active': active})
+
+@login_required(login_url='/login/')
+def add_ques(request):
+	
+	user = get_object_or_404(User, username = request.user.username)
+	if request.method=='POST':
+		form = forms.QuestionForm(request.POST)
+		print form.errors
+		if form.is_valid():
+			question = QuestionDetail.objects.get_or_create(
+				owner = user,
+				question = form.cleaned_data['question'],
+				marks = form.cleaned_data['marks'],
+				unit = form.cleaned_data['unit'],
+				# subject = ActiveSession.objects.filter(user=user)['select'],
+				co = form.cleaned_data['co']
+				)
+			return HttpResponseRedirect('/add_ques/')
+	form = forms.QuestionForm()
+	return render(request, 'addNew.html', {'user': user, 'form': form})	
 
 @login_required(login_url='/login/')
 def logout_page(request):
 	
+	user = get_object_or_404(User, username = request.user.username) 
+	try:
+		ActiveSession.objects.filter(user = user).delete()
+	except:
+		pass
 	logout(request)
 	return HttpResponseRedirect('/')

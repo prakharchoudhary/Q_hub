@@ -1,6 +1,8 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 {% block title %}
 <title>Sample</title>
+<link rel="stylesheet" type="text/css" href={% static "css/style_1.css" %}>
 {% endblock %}
 {% block content %}
 <div class="process">
@@ -8,7 +10,7 @@
 </div>
 <h3><i>Please select the following fields to continue:</i></h3>
 <div class="form">
-<form action="/select/" method="POST">{% csrf_token %}
+<form action="/main/" method="POST">{% csrf_token %}
 <div>
 <span>
 {{ form.branch }}

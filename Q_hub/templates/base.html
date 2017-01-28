@@ -3,29 +3,28 @@
 <html lang="en-US">
 <head>
 	{% block title %}{% endblock %}
-	<link rel="stylesheet" type="text/css" href={% static "css/style_index.css" %}>
+	{% block extra %}{% endblock %}
 	<link rel="stylesheet" type="text/css" href={% static "css/w3.css" %}>
 	<link rel="stylesheet" href={% static "css/base.css" %}>
 </head>
 <body>
-		<header>
-			<nav>
-				<ul class="logo">
-					<li>Student Assessment</li>
-				</ul>
-
-				<ul class="navigation">
-					<li><a href="/main/">Home</a></li>
-					<li><a href="#">Contact</a></li>
-					{% if user.is_authenticated %}
-					<li><a href="/logout">Log Out</a></li>
-					{% endif %}
-				</ul>
-			</nav>
-		</header>
-		{% block content %}{% endblock %}
-		<footer>
-				<p> &copy;Nibble Computer Society</p>
-		</footer>
+<header>
+<nav>
+<ul class="logo">
+<li>Student Assessment</li>
+</ul>
+<ul class="navigation">
+<li><a href="/main/">Home</a></li>
+<li><a href="#">Contact</a></li>
+{% if user.is_authenticated %}
+<li><a href="/logout">Log Out</a></li>
+{% endif %}
+</ul>
+</nav>
+</header>
+{% block content %}{% endblock %}
+<footer>
+<p> &copy;Nibble Computer Society</p>
+</footer>
 </body>
 </html>

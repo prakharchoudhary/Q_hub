@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+			<title>Sample</title>
+			<link rel="stylesheet" type="text/css" href="css/addNew.css">
+			<link rel="stylesheet" type="text/css" href="css/w3.css">
+			<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+
+  </head>
+	<body>
+		<header>
+			<nav>
+				<ul class="logo">
+					<li>Student Assessment</li>
+				</ul>
+
+				<ul class="navigation">
+					<li>Home</li>
+					<li>Contact</li>
+					<li>Log Out</li>
+				</ul>
+			</nav>
+		</header>
+		<div class="process">
+				<h2>ADD A NEW QUESTION</h2>
+			    	<form class="add-form" action="demo_form.asp">
+								<div id="editor-wrap">
+									<textarea name="editor" id="editor" rows="10" cols="40">
+					           Add text here!!
+					        </textarea>
+								</div>
+								<div class="fields">
+									<h3>Select Fields:</h3>
+									<span><h5>Unit:</h5>
+										<input type="number" name="unit" min="1" max="5" value="2"><br>
+									</span>
+									<span><h5>Marks:</h5>
+										<input type="number" name="marks" min="1" max="5" value="5"><br>
+									</span>
+									<span><h5>CO:</h5>
+										<input type="number" name="CoOc" min="1" max="5" value="2"><br>
+									</span>
+								</div>
+
+			    	</form>
+			</div>
+
+		<footer>
+		<p> &copy;Nibble Computer Society</p>
+		</footer>
+		<script>
+				CKEDITOR.replace('editor');
+	  </script>
+	</body>
+</html>

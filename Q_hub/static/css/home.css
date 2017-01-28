@@ -1,0 +1,42 @@
+ h3 {
+  text-align:center;
+  margin: 0 auto;
+}
+
+.list {
+ display: flex;
+ justify-content: center;
+}
+
+.icon {
+ list-style-type: none;
+ display: inline-block;
+ margin-top: 15px;
+ padding-left: 0;
+}
+.icon li {
+  margin-bottom: 8px;
+  margin-left: 13%;
+
+}
+.icon li a {
+  margin-left: 2%;
+  font-size: 16px !important;
+  font-weight: 400;
+}
+.svg-icon {
+  width: 15%;
+  position: relative;
+  top: 15px;
+}
+
+.op,#op {
+  margin-bottom: 40px;
+}
+.ic,#ic {
+  padding-top: 10px;
+  margin-bottom: 30px;
+}
+a {
+  text-decoration: none;
+}

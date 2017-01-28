@@ -27,9 +27,14 @@ nav ul {
 }
 
 nav li{
-    margin-right: 2px;
+    margin-right: 5px;
     display:inline;
 }
+
+nav li a {
+  text-decoration: none;
+}
+
 #logo {
     text-align:left;
 }
