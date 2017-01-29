@@ -13,8 +13,9 @@ class SubjectCode(models.Model):
 class QuestionDetail(models.Model):
 	owner = models.ForeignKey(User)
 	date_created = models.DateTimeField(auto_now_add=True)
+	branch = models.CharField(max_length=40, null=True)
 	question = RichTextField()
-	# subject = models.ForeignKey(SubjectCode)
+	subject = models.ForeignKey(SubjectCode, null=True)
 	marks = models.IntegerField()
 	unit = models.IntegerField()
 	n_used = models.IntegerField(default=0)

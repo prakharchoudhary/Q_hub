@@ -7,7 +7,14 @@
 {% block content %}
 <div class="process">
 <h2>ADD A NEW QUESTION</h2>
-<form class="add-form" action="." method="POST">{% csrf_token %}
+<!-- {% if messages %}
+<ul class="messages" style="list-style: none; color: green">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}><strong>{{ message }}</strong></li>
+    {% endfor %}
+</ul>
+{% endif %} -->
+<form class="add-form" action="/add_ques/" method="POST">{% csrf_token %}
 <div id="editor-wrap">
 {{ form.media }}
 {{ form.question }}

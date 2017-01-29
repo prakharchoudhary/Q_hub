@@ -25,5 +25,5 @@ class QuestionForm(forms.ModelForm):
 
 	class Meta:
 		model = QuestionDetail
-		exclude = ('owner','date_created', 'n_used', 'imp')
+		exclude = ('owner','date_created', 'n_used', 'imp', 'subject', 'branch')
 		widgets = {'description': CKEditorWidget, }

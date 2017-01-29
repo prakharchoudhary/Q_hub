@@ -26,5 +26,6 @@ urlpatterns = [
     url(r'^main/$', views.main, name='main'),
     url(r'^select/$', views.select, name='select'),
     url(r'^add_ques/$', views.add_ques, name='add_ques'),
+    url(r'^view_all/$', views.view_all, name='view_all'),
     url(r'^logout/$', views.logout_page, name='logout'),
 ]
